@@ -16,7 +16,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.macosx.exe.debug.890472119." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.macosx.exe.debug.256913864" name="MacOSX GCC" nonInternalBuilderId="cdt.managedbuild.target.gnu.builder.macosx.exe.debug" superClass="cdt.managedbuild.toolchain.gnu.macosx.exe.debug">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.macosx.exe.debug.1114251024" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.macosx.exe.debug"/>
-							<builder autoBuildTarget="all" buildPath="${workspace_loc:/PMDS}/Debug" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1214497041" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" stopOnErr="false" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/PMDS}/Debug" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1337933727" incrementalBuildTarget="all" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
 							<tool id="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug.872177933" name="MacOS X C Linker" superClass="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug.1309293076" name="MacOS X C++ Linker" superClass="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug">
 								<option id="macosx.cpp.link.option.paths.469407369" name="Library search path (-L)" superClass="macosx.cpp.link.option.paths" valueType="libPaths">
@@ -45,7 +45,8 @@
 									<listOptionValue builtIn="false" value="/opt/local/include"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.918321224" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.other.other.769349615" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -D_FILE_OFFSET_BITS=64 -std=c++11" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.769349615" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -std=c++11" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.pic.463067972" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" value="false" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.852674558" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1879178684" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug">
@@ -57,12 +58,13 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/paxos/paxos/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
 								</option>
+								<option id="gnu.c.compiler.option.misc.other.1134153103" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2005068298" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="paxos/paxos/storage_bdb.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

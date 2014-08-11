@@ -12,6 +12,7 @@
 
 #include "../../error.hpp"
 #include "../../request_queue/queue.hpp"
+#include "request.hpp"	// added for sizeof issue, 08112014
 
 namespace paxos { namespace detail { namespace quorum { 
 class client_view;
@@ -26,7 +27,7 @@ class initiate_request
 {
 public:
 
-   typedef detail::request_queue::queue <struct request>::guard::pointer queue_guard_type;
+   typedef detail::request_queue::queue<struct request>::guard::pointer queue_guard_type;
 
    typedef boost::function <void (boost::optional <enum detail::error_code>,
                                   std::string const &)>                         callback_type;

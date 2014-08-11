@@ -11,7 +11,7 @@
 namespace paxos { namespace detail { namespace client { namespace protocol {
 
 /*! static */ void
-initiate_request::step1 (      
+initiate_request::step1 (
    std::string const &                  byte_array,
    detail::quorum::client_view &        quorum,
    callback_type                        callback,

@@ -25,7 +25,7 @@ client::client (
      request_queue_ (
         []
         (detail::client::protocol::request const &                                              request,
-         detail::request_queue::queue <detail::client::protocol::request>::guard::pointer       guard)
+         detail::request_queue::queue<detail::client::protocol::request>::guard::pointer        guard)
         {
            detail::client::protocol::initiate_request::step1 (request.byte_array_,
                                                               request.quorum_,
