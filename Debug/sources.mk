@@ -23,11 +23,14 @@ C_UPPER_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-paxos \
-paxos/durable \
-paxos/detail \
-paxos/detail/strategy/basic_paxos/protocol \
-paxos/detail/strategy/basic_paxos \
-paxos/detail/quorum \
-paxos/detail/client/protocol \
+. \
+paxos-cpp \
+paxos-cpp/durable \
+paxos-cpp/detail \
+paxos-cpp/detail/strategy/basic_paxos/protocol \
+paxos-cpp/detail/strategy/basic_paxos \
+paxos-cpp/detail/quorum \
+paxos-cpp/detail/client/protocol \
+paxos/paxos \
+paxos/evpaxos \
 

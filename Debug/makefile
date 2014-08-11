@@ -8,13 +8,15 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include paxos/durable/subdir.mk
--include paxos/detail/strategy/basic_paxos/protocol/subdir.mk
--include paxos/detail/strategy/basic_paxos/subdir.mk
--include paxos/detail/quorum/subdir.mk
--include paxos/detail/client/protocol/subdir.mk
--include paxos/detail/subdir.mk
--include paxos/subdir.mk
+-include paxos/paxos/subdir.mk
+-include paxos/evpaxos/subdir.mk
+-include paxos-cpp/durable/subdir.mk
+-include paxos-cpp/detail/strategy/basic_paxos/protocol/subdir.mk
+-include paxos-cpp/detail/strategy/basic_paxos/subdir.mk
+-include paxos-cpp/detail/quorum/subdir.mk
+-include paxos-cpp/detail/client/protocol/subdir.mk
+-include paxos-cpp/detail/subdir.mk
+-include paxos-cpp/subdir.mk
 -include subdir.mk
 -include objects.mk
 

@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -losxfuse
+LIBS := -losxfuse -lboost_serialization-mt -lboost_system-mt
 
