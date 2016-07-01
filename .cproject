@@ -16,7 +16,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.macosx.exe.debug.890472119." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.macosx.exe.debug.256913864" name="MacOSX GCC" nonInternalBuilderId="cdt.managedbuild.target.gnu.builder.macosx.exe.debug" superClass="cdt.managedbuild.toolchain.gnu.macosx.exe.debug">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.macosx.exe.debug.1114251024" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.macosx.exe.debug"/>
-							<builder autoBuildTarget="all" buildPath="${workspace_loc:/PMDS}/Debug" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1337933727" incrementalBuildTarget="all" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/PMDS}/Debug" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1337933727" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
 							<tool id="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug.872177933" name="MacOS X C Linker" superClass="cdt.managedbuild.tool.macosx.c.linker.macosx.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug.1309293076" name="MacOS X C++ Linker" superClass="cdt.managedbuild.tool.macosx.cpp.linker.macosx.exe.debug">
 								<option id="macosx.cpp.link.option.paths.469407369" name="Library search path (-L)" superClass="macosx.cpp.link.option.paths" valueType="libPaths">

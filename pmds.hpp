@@ -11,22 +11,8 @@
 
 #include <boost/filesystem.hpp>
 
-// Announcement port
-#define PMDS_CLIENT_PORT        5001
-// Messaging port
-#define PMDS_SERVER_PORT		5002
-// Advertisement interval
-#define PMDS_ADVINTERVAL     10
-// Reject advertisements with large time skew
-#define PMDS_ADVSKEW         50
-// Repository check interval
-#define PMDS_MONINTERVAL     20
-// Sync interval
-#define PMDS_SYNCINTERVAL    10
+#include "config.hpp"
 
-#define PMDS_LOGFILE        "pmds.log"
-#define PMDS_CONFFILE		"pmds.conf"
-#define PMDS_METAFILE		"pmds_meta.xml"
 
 class PMDS
 {
@@ -44,7 +30,21 @@ class PMDS
 		return pmds;
 	}
 
-	void init();
+	void init()
+	{
+		std::string home = fsutil::get_home();
+		assert(home != "");
+		if(!boost::filesystem::exits(home + "/PetaFS"))
+		{
+			boost::filesystem::create_directory(home + "/PetaFS");
+		}
+		// chdir so that coredumps are placed in ~/PetaFS
+		chdir(home.c_str());
+		fsutil::open_log(home + config.MDS_LOGFILE);
+
+		start_server();
+	}
+
 	int start_server();
 
 	int mds_unlink(const std::string &path, bool fromFUSE);
@@ -68,11 +68,15 @@ private:
 		// XXX get mypaths from metafile
 		boost::filesystem::path home = fsutil::get_home();
 		assert(home != "");
-		if (!boost::filesystem::exists(home + "/petafs"))
+		if (!boost::filesystem::exists(home + "/PetaFS"))
 		{
-			boost::filesystem::create_directory(home + "/petafs");
+			boost::filesystem::create_directory(home + "/PetaFS");
 		}
-		metafile = home + PMDS_METAFILE;
+
+		// Read configuration file
+		config = new config();
+
+		metafile = home + config.MDS_METAFILE;
 		if (boost::filesystem::exists(metafile))
 		{
 			load();
@@ -103,6 +107,7 @@ private:
 	}
 
 	std::string metafile;
+	config config;
 
 };
 
